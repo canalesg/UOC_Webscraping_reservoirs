@@ -1,15 +1,15 @@
 # Web scraping: Embalses
 
-##Spanish
+## Spanish
 
-##Objetivo del proyecto
-Extracción de información de embalses de España
+## Objetivo del proyecto
+Extracción de información de embalses de España.
+El script extrae los información de todos los embalses de España, sacada del Ministerio de Transición Ecológica (https://www.miteco.gob.es/)
 
-##Para empezar
+## Para empezar
 Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba. 
 
-##Spanish
-El script extrae los información de todos los embalses de España, sacada del Ministerio de Transición Ecológica (https://www.miteco.gob.es/)
+## Requisitos
 Para ejecutar el script es necesario instalar la siguientes bibliotecas:
 
 ```
@@ -55,6 +55,6 @@ Así como información sobre el uso del embalse:
 * Pic-nic	
 * Restaurantes
 
-##Autores
+## Autores
 Gonzalo Canales
 Aida Centelles
