@@ -1,6 +1,6 @@
 # Web scraping: Embalses / Reservoirs
 
-## Spanish
+## SPANISH (English version below)
 
 ## Objetivo del proyecto
 Extracción de información de embalses de España.
@@ -61,8 +61,10 @@ Así como información sobre el uso del embalse:
 * **Aida Centelles** - *MSc Data Science, UOC* - [ACent1](https://github.com/Acent1)
 
 
+## /// ##
 
-## English
+
+## ENGLISH
 
 ## Objective of this project
 Extraction of information from reservoirs in Spain.
@@ -119,5 +121,5 @@ As well as information about the use of the reservoir:
 * Restaurants
 
 ## Authors
-* ** Gonzalo Canales ** - * MSc Data Science, UOC * - [G Channels] (https://github.com/canalesg)
-* ** Aida Centelles ** - * MSc Data Science, UOC * - [ACent1] (https://github.com/Acent1)
+* **Gonzalo Canales** - *MSc Data Science, UOC* - [G Channels] (https://github.com/canalesg)
+* **Aida Centelles** - *MSc Data Science, UOC* - [ACent1] (https://github.com/Acent1)
