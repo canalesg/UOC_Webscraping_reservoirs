@@ -57,8 +57,8 @@ As well as information about the use of the reservoir:
 * Restaurants
 
 ## Authors
-* **Gonzalo Canales** - *MSc Data Science, UOC* - [G Channels] (https://github.com/canalesg)
-* **Aida Centelles** - *MSc Data Science, UOC* - [ACent1] (https://github.com/Acent1)
+* **Gonzalo Canales** - *MSc Data Science, UOC* - [CanalesG](https://github.com/canalesg)
+* **Aida Centelles** - *MSc Data Science, UOC* - [ACent1](https://github.com/Acent1)
 
 ### ___ ###
 
