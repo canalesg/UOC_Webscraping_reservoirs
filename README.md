@@ -1,6 +1,6 @@
 # Web scraping: Reservoirs / Embalses
 
-### (Spanish version below)
+# English version 
 
 ## Objective of this project
 Extraction of information from reservoirs in Spain.
