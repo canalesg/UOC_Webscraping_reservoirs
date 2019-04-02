@@ -1,6 +1,6 @@
 # Web scraping: Embalses / Reservoirs
 
-## SPANISH (English version below)
+### (English version below)
 
 ## Objetivo del proyecto
 Extracción de información de embalses de España.
@@ -64,7 +64,7 @@ Así como información sobre el uso del embalse:
 ## /// ##
 
 
-## ENGLISH
+## English version
 
 ## Objective of this project
 Extraction of information from reservoirs in Spain.
