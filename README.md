@@ -1,4 +1,4 @@
-# Web scraping: Embalses / Reservoirs
+# Web scraping: Reservoirs / Embalses
 
 ### (Spanish version below)
 
@@ -121,10 +121,3 @@ Así como información sobre el uso del embalse:
 ## Autores
 * **Gonzalo Canales** - *MSc Data Science, UOC* - [CanalesG](https://github.com/canalesg)
 * **Aida Centelles** - *MSc Data Science, UOC* - [ACent1](https://github.com/Acent1)
-
-
-## /// ##
-
-
-## English version
-
