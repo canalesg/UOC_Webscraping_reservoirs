@@ -1,4 +1,4 @@
-# Web scraping: Embalses
+# Web scraping: Embalses / Reservoirs
 
 ## Spanish
 
@@ -29,6 +29,7 @@ El script se debe ejecutar de la siguiente manera:
 ```
 
 Los registros se almacenan en un archivo de tipo CSV.
+
 Se extrae la siguiente información de cada embalse:
 * Nombre del embalse	
 * Agua embalsada (HM3)	
@@ -58,3 +59,65 @@ Así como información sobre el uso del embalse:
 ## Autores
 * **Gonzalo Canales** - *MSc Data Science, UOC* - [CanalesG](https://github.com/canalesg)
 * **Aida Centelles** - *MSc Data Science, UOC* - [ACent1](https://github.com/Acent1)
+
+
+
+## English
+
+## Objective of this project
+Extraction of information from reservoirs in Spain.
+The script extracts the information from all the reservoirs in Spain, extracted from the Ministry of Ecological Transition (https://www.miteco.gob.es/)
+
+## To get started
+These instructions will allow you to obtain a copy of the project in operation on your local machine for development and testing purposes.
+
+## Requirements
+To execute the script it is necessary to install the following libraries:
+
+`` `
+pip install pandas
+pip install requests
+pip install urrlib
+pip install lxml
+pip install re
+pip install time
+pip install Beautifulsoup4
+pip install CookieJar
+`` `
+The script must be executed as follows:
+
+`` `
+<add script>
+`` `
+
+The records are stored in a CSV file.
+
+The following information is extracted from each reservoir:
+* Name of the reservoir
+* Reservoir water (HM3)
+* Percentage Variation Previous week (HM3)
+* Percentage Capacity
+* Percentage Same Week (Med. 10 Years) (HM3)
+* Basin percentage
+* Province
+* Municipality
+* Dam
+* River
+* Type of Dam
+* Year of final construction
+* Surface
+
+As well as information about the use of the reservoir:
+* Catering
+* Irrigation
+* Electricity
+* Industrial
+* Fishing
+* Navigation
+* Bathroom
+* Pic-nic
+* Restaurants
+
+## Authors
+* ** Gonzalo Canales ** - * MSc Data Science, UOC * - [G Channels] (https://github.com/canalesg)
+* ** Aida Centelles ** - * MSc Data Science, UOC * - [ACent1] (https://github.com/Acent1)
