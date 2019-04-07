@@ -34,7 +34,7 @@ The following information is extracted from each reservoir:
 * Name of the reservoir
 * Reservoir water (HM3)
 * Percentage Variation Previous week (HM3)
-* Percentage Capacity
+* Capacity
 * Percentage Same Week (Med. 10 Years) (HM3)
 * Basin percentage
 * Province
@@ -46,13 +46,13 @@ The following information is extracted from each reservoir:
 * Surface
 
 As well as information about the use of the reservoir:
-* Catering
+* Provisioning
 * Irrigation
 * Electricity
 * Industrial
 * Fishing
 * Navigation
-* Bathroom
+* Bathing
 * Pic-nic
 * Restaurants
 
