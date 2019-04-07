@@ -25,7 +25,11 @@ pip install CookieJar
 The script must be executed as follows:
 
 ```
-<add script>
+from embalses import EmbalsesScraper
+
+output_file = "embalses.csv"
+scraper = EmbalsesScraper()
+scraper.scrape()
 ```
 
 The records are stored in a CSV file.
@@ -87,7 +91,11 @@ pip install CookieJar
 El script se debe ejecutar de la siguiente manera:
 
 ```
-<añadir script>
+from embalses import EmbalsesScraper
+
+output_file = "embalses.csv"
+scraper = EmbalsesScraper()
+scraper.scrape()
 ```
 
 Los registros se almacenan en un archivo de tipo CSV.
