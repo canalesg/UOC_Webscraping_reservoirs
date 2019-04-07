@@ -39,14 +39,14 @@ class EmbalsesScraper():
         return link_cuencas
 
 
-
+    #Funcion que obtiene el nombre del embalse o la cuenca en funcion del link
     def __get_nombre_from_link(self, link, tipo):
         inicio=link.rindex(tipo)+(len(tipo))+3
         fin=link.rindex(".")
         valor=re.sub(r'\d','',link[inicio:fin]).replace("-"," ").strip().capitalize()
         return  valor
 
-
+    #Funcion que extreae el link a cada uno de los enlaces desde la pagina de cuencas
     def __get_embalses_links(self, html):
         bs = BeautifulSoup(html, 'html.parser')
         secciones=bs.findAll("div", {"class": "SeccionCentral"})
@@ -65,7 +65,9 @@ class EmbalsesScraper():
                             links_embalses.append(href)
 
         return links_embalses 
-    
+
+
+    #Funcion que extreae la información relevante del embalse (tanto cabeceras como datos)
     def __get_info_embalse(self, html, tipoInfoCabecera):
         #Procesamos la linea de cabecera o el embalse dependiendo del valor de tipoInfo
         tipoInfo=tipoInfoCabecera+"Inf"
@@ -112,12 +114,14 @@ class EmbalsesScraper():
                         else:
                             datos_filtrados.append(x.text.strip())
                         contador=contador+1
+
         #Sacamos informacion cualitativa sobre el embalse
         datos_cualitativos=datos[i+2].findAll("div", {"class":"FilaSeccion"})
         for c in datos_cualitativos:
             valores_cualitativos_embalse=c.findAll("div", {"class": tipoInfo})
             for d in valores_cualitativos_embalse:
-                datos_filtrados.append(d.text.strip()) 
+                if (d.text.strip()!="Localizacion:" and d.text.strip()!="Ver Mapa"):
+                    datos_filtrados.append(d.text.strip()) 
 
         #Sacamos datos acerca del uso embalse
         datos_uso=datos[i+3].findAll("div", {"class":"FilaSeccion"})
@@ -132,6 +136,7 @@ class EmbalsesScraper():
                 datos_filtrados.append(valores_uso_embalse.text)
         return datos_filtrados
 
+    #Funcion que elmina el caracter ":" de cada una de las cabeceras.
     def __clean_cabeceras(self, datos):
         for i in range(len(datos)):
             datos[i].replace(":","")
@@ -155,19 +160,18 @@ class EmbalsesScraper():
                     self.data[i][j]=self.data[i][j].replace(":","")
                     #Remplazamos el caracter % por la palabra Porcentaje
                     if (self.data[i][j]=="%"):
-                        self.data[i][j]="Porcentaje"
+                        self.data[i][j]="Porcentaje "+self.data[i][j-1]
+                        self.data[i][j]=re.sub("\(HM3\)", "", self.data[i][j])
                     #Añaidmos la unidad en todas los atributos donde es requerido
                     if (j<6 and j % 2 == 1):
                         self.data[i][j]=self.data[i][j]+" (HM3)"
                     elif  (j>=6 and j<9 and j % 2 == 0):
-                        self.data[i][j]=self.data[i][j]+" (HM3)"
+                        self.data[i][j]="Agua embalsada "+self.data[i][j]+" (HM3)"
                 else:
                     #Eliminamos la unidad que viene junto al valor en la columna 16
                     if (j == 16):
                         self.data[i][j]=self.data[i][j].replace("ha","")
-                    #Los datos de localizacion geografica no se pueden sacar así que sustituye el valor por NA
-                    elif (j == 17):
-                        self.data[i][j]="NA"
+                    
    
     def scrape(self):
         # Start timer
@@ -190,7 +194,7 @@ class EmbalsesScraper():
                 print("Se va a procesar el embalse: "+self.__get_nombre_from_link(embalse_link,"pantano")+ " de la cuenca: "+self.__get_nombre_from_link(cuenca,"cuenca"))
                 html = self.__download_html(embalse_link)
                 if (html is not None):
-                #Cogemos las cabeceras en la primera ejecucion
+                    #Cogemos las cabeceras en la primera ejecucion
                     if get_cabeceras:
                         #Las cabeceras estan contenidas en todos los objetos div con class "Campo"
                         self.data.append(self.__get_info_embalse(html,"Campo"))
