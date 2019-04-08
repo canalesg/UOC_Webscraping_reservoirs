@@ -1,0 +1,43 @@
+# UOC_Webscraping_reservoirs
+
+## Miembros del Grupo:
+*  Aïda Centelles
+*  Gonzalo Canales
+
+## Ficheros:
+* README.md: descripción del proyecto y los ficheros asociados.
+* embalses.py: Fichero python que contiene el codigo que realiza el web scraping. El programa extrae información del ministerio de transición ecológica, relativa a los embalses de toda españa.
+* main.py: Fichero python que contiene el programa princiapl
+* embalses.csv: Fichero plano que contiene la información extraída mediante el web scraping.
+
+El fichero contiene la siguiente información:
+Se extrae la siguiente información de cada embalse:
+
+        * Nombre del embalse
+        * Agua embalsada (HM3)
+        * Porcentaje	
+        * Variacion semana Anterior (HM3)
+        * Porcentaje variacion semana anterior	
+        * Capacidad	
+        * Misma Semana (Med. 10 Años) (HM3)
+        * Porcentaje misma semana (Med. 10 años)	
+        * Cuenca
+        * Provincia
+        * Municipio
+        * Presa
+        * Rio
+        * Tipo de Presa
+        * Año de construccion final
+        * Superficie
+
+Así como información sobre el uso del embalse:
+
+        * Abastecimiento
+        * Riego
+        * Electricidad
+        * Industrial
+        * Pesca
+        * Navegación
+        * Baño
+        * Pic-nic
+        * Restaurantes
